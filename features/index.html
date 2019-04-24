@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>noisecloud | ica component features of fmri</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="" />
+
+	<style type="text/css">
+		.blog .hentry a .attachment-home-post,
+		.archive .hentry a .attachment-home-post,
+		.search .hentry a .attachment-home-post {
+			filter: grayscale(100%);
+			-webkit-filter: grayscale(100%);
+			-webkit-filter: grayscale(1); /* Older versions of webkit */
+			-moz-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+			-ms-filter: grayscale(100%); /* IE 10 */
+			filter: gray; /* IE 9 */
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox */
+		}
+		@media screen and ( max-width: 800px ) {
+			/* Remove hover effects for touchscreens */
+			.blog .hentry a .attachment-home-post,
+			.archive .hentry a .attachment-home-post,
+			.search .hentry a .attachment-home-post {
+				filter:none;
+				-webkit-filter:none;
+				-moz-filter:none;
+				-o-filter:none;
+			}
+		}
+	</style>
+				<style type="text/css">
+			.site-content #nav-below .nav-previous a,
+			.site-content #nav-below .nav-next a,
+			.site-content #image-navigation .nav-previous a,
+			.site-content #image-navigation .nav-next a,
+			.comment-navigation .nav-next,
+			.comment-navigation .nav-previous,
+			#infinite-handle span,
+			.sidebar-link,
+			a.comment-reply-link,
+			a#cancel-comment-reply-link,
+			.comments-link a,
+			.hentry.no-thumbnail,
+			button,
+			html input[type="button"],
+			input[type="reset"],
+			input[type="submit"],
+			.site-footer {
+				opacity: .2;
+			}
+			.site-header,
+			.entry-meta-wrapper,
+			.comment-meta,
+			.page-links span.active-link,
+			.page-links a span.active-link {
+				opacity: .3;
+			}
+			@media screen and ( max-width: 800px ) {
+				/* Increase opacity for small screen sizes and touch screens */
+				.site-header,
+				.site-content #nav-below .nav-previous a,
+				.site-content #nav-below .nav-next a,
+				.site-content #image-navigation .nav-previous a,
+				.site-content #image-navigation .nav-next a,
+				.comment-navigation .nav-next a,
+				.comment-navigation .nav-previous a,
+				#infinite-handle span,
+				.sidebar-link,
+				a.comment-reply-link,
+				a#cancel-comment-reply-link,
+				.site-footer,
+				.comments-link a,
+				.comment-meta,
+				.entry-meta-wrapper,
+				.hentry.no-thumbnail,
+				.page-links span.active-link,
+				.page-links a span.active-link {
+					opacity: 1;
+				}
+			}
+		</style>
+				<style type="text/css">
+			.hentry .thumbnail-title {
+				display: none;
+			}
+		</style>
+		<link rel="alternate" type="application/rss+xml" title="noisecloud &raquo; Feed" href="feed/" />
+<link rel="alternate" type="application/rss+xml" title="noisecloud &raquo; Comments Feed" href="feed/comments" />
+<link rel="alternate" type="application/rss+xml" title="noisecloud &raquo; About Comments Feed" href="feed/about" />
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='../css/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='../css/style.css?ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='spun-quicksand-css'  href='https://fonts.googleapis.com/css?family=Quicksand%3A300&#038;ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='spun-playfair-css'  href='https://fonts.googleapis.com/css?family=Playfair+Display%3A400%2C700%2C400italic%2C700italic&#038;ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='spun-nunito-css'  href='https://fonts.googleapis.com/css?family=Nunito%3A300&#038;ver=4.4.18' type='text/css' media='all' />
+<script type='text/javascript' src='../js/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='../js/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="canonical" href="https://vsoch.github.io/noisecloud-www/" />
+<link rel='shortlink' href='https://vsoch.github.io/noisecloud-www/' />
+	<style type="text/css">
+				.site-title a,
+			.site-description {
+					color: #999;
+			}
+		</style>
+	</head>
+
+<body class="home page page-id-2 page-template-default">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+		<div class="header-wrapper">
+						<div class="site-branding">
+				<h1 class="site-title"><a href="https://vsoch.github.io/noisecloud-www/" title="noisecloud" rel="home">noisecloud</a></h1>
+				<h2 class="site-description">ica component features of fmri</h2>
+			</div>
+		</div>
+		<nav role="navigation" class="site-navigation main-navigation">
+			<h1 class="screen-reader-text">Menu</h1>
+			<div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+			<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91"><a href="https://github.com/vsoch/noisecloud">Download</a></li>
+<li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-70"><a href="">Features</a>
+<ul class="sub-menu">
+	<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="../spatial/">spatial</a></li>
+	<li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a href="../temporal/">temporal</a></li>
+	<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="../submit/">contribute</a></li>
+</ul>
+</li>
+<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-26"><a href="../documentation/">Documentation</a>
+<ul class="sub-menu">
+	<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="../instructions/">Instructions</a></li>
+</ul>
+</li>
+<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-24"><a href="">About</a></li>
+</ul></div>		</nav><!-- .site-navigation .main-navigation -->
+	</header><!-- #masthead .site-header -->
+
+	<div id="main" class="site-main">
+		<div id="primary" class="content-area">
+			<div id="content" class="site-content" role="main">
+
+				
+					
+<article id="post-68" class="post-68 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">Features</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Independent component analysis (ICA) is a method that decomposes timeseries data into a set of components, or independent signals that when mixed up, reproduce the original data.  When applied to functional magnetic resonance imaging (fMRI), the resulting components encompass a mixture of noise and brain functional networks.  Each component includes a 3D brain map that shows the spatial location of the network or artifact, and a corresponding timeseries that describes the activity of the regions in the map.  <a title="temporal" href="http://vbmis.com/bmi/noisecloud/temporal/">Temporal Features</a> include metrics that quantify the timeseries, and <a title="spatial" href="http://vbmis.com/bmi/noisecloud/spatial/">Spatial Features</a> are metrics that describe the spatial maps.</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+					<span class="comments-link">
+				<a href="#comments-toggle">
+					<span class="tail"></span>
+					+				</a>
+			</span>
+		
+		<div class="entry-meta-wrapper">
+					</div>
+	</footer><!-- .entry-meta -->
+</article><!-- #post-68 -->
+					
+	<div id="comments-toggle"></div>
+	<div id="comments" class="comments-area">
+
+	
+	
+	
+					<div id="respond" class="comment-respond">
+</div><!-- #comments .comments-area -->
+
+				
+			</div><!-- #content .site-content -->
+		</div><!-- #primary .content-area -->
+
+				<div id="secondary" class="widget-area" role="complementary">
+
+									
+		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main .site-main -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+            <span class="sep"> | </span>
+        	 <a href="https://vsoch.github.io/">vsoch</a>.		</div><!-- .site-info -->
+			</footer><!-- #colophon .site-footer -->
+</div><!-- #page .hfeed .site -->
+
+<script type='text/javascript' src='../js/toggle.js?ver=20121005'></script>
+<script type='text/javascript' src='../js/comment-reply.min.js?ver=4.4.18'></script>
+<script type='text/javascript' src='../js/wp-embed.min.js?ver=4.4.18'></script>
+
+</body>
+</html>

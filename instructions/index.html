@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>noisecloud | ica component features of fmri</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="" />
+
+	<style type="text/css">
+		.blog .hentry a .attachment-home-post,
+		.archive .hentry a .attachment-home-post,
+		.search .hentry a .attachment-home-post {
+			filter: grayscale(100%);
+			-webkit-filter: grayscale(100%);
+			-webkit-filter: grayscale(1); /* Older versions of webkit */
+			-moz-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+			-ms-filter: grayscale(100%); /* IE 10 */
+			filter: gray; /* IE 9 */
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox */
+		}
+		@media screen and ( max-width: 800px ) {
+			/* Remove hover effects for touchscreens */
+			.blog .hentry a .attachment-home-post,
+			.archive .hentry a .attachment-home-post,
+			.search .hentry a .attachment-home-post {
+				filter:none;
+				-webkit-filter:none;
+				-moz-filter:none;
+				-o-filter:none;
+			}
+		}
+	</style>
+				<style type="text/css">
+			.site-content #nav-below .nav-previous a,
+			.site-content #nav-below .nav-next a,
+			.site-content #image-navigation .nav-previous a,
+			.site-content #image-navigation .nav-next a,
+			.comment-navigation .nav-next,
+			.comment-navigation .nav-previous,
+			#infinite-handle span,
+			.sidebar-link,
+			a.comment-reply-link,
+			a#cancel-comment-reply-link,
+			.comments-link a,
+			.hentry.no-thumbnail,
+			button,
+			html input[type="button"],
+			input[type="reset"],
+			input[type="submit"],
+			.site-footer {
+				opacity: .2;
+			}
+			.site-header,
+			.entry-meta-wrapper,
+			.comment-meta,
+			.page-links span.active-link,
+			.page-links a span.active-link {
+				opacity: .3;
+			}
+			@media screen and ( max-width: 800px ) {
+				/* Increase opacity for small screen sizes and touch screens */
+				.site-header,
+				.site-content #nav-below .nav-previous a,
+				.site-content #nav-below .nav-next a,
+				.site-content #image-navigation .nav-previous a,
+				.site-content #image-navigation .nav-next a,
+				.comment-navigation .nav-next a,
+				.comment-navigation .nav-previous a,
+				#infinite-handle span,
+				.sidebar-link,
+				a.comment-reply-link,
+				a#cancel-comment-reply-link,
+				.site-footer,
+				.comments-link a,
+				.comment-meta,
+				.entry-meta-wrapper,
+				.hentry.no-thumbnail,
+				.page-links span.active-link,
+				.page-links a span.active-link {
+					opacity: 1;
+				}
+			}
+		</style>
+				<style type="text/css">
+			.hentry .thumbnail-title {
+				display: none;
+			}
+		</style>
+		<link rel="alternate" type="application/rss+xml" title="noisecloud &raquo; Feed" href="feed/" />
+<link rel="alternate" type="application/rss+xml" title="noisecloud &raquo; Comments Feed" href="feed/comments" />
+<link rel="alternate" type="application/rss+xml" title="noisecloud &raquo; About Comments Feed" href="feed/about" />
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='../css/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='../css/style.css?ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='spun-quicksand-css'  href='https://fonts.googleapis.com/css?family=Quicksand%3A300&#038;ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='spun-playfair-css'  href='https://fonts.googleapis.com/css?family=Playfair+Display%3A400%2C700%2C400italic%2C700italic&#038;ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='spun-nunito-css'  href='https://fonts.googleapis.com/css?family=Nunito%3A300&#038;ver=4.4.18' type='text/css' media='all' />
+<script type='text/javascript' src='../js/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='../js/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="canonical" href="https://vsoch.github.io/noisecloud-www/" />
+<link rel='shortlink' href='https://vsoch.github.io/noisecloud-www/' />
+	<style type="text/css">
+				.site-title a,
+			.site-description {
+					color: #999;
+			}
+		</style>
+	</head>
+
+<body class="home page page-id-2 page-template-default">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+		<div class="header-wrapper">
+						<div class="site-branding">
+				<h1 class="site-title"><a href="https://vsoch.github.io/noisecloud-www/" title="noisecloud" rel="home">noisecloud</a></h1>
+				<h2 class="site-description">ica component features of fmri</h2>
+			</div>
+		</div>
+		<nav role="navigation" class="site-navigation main-navigation">
+			<h1 class="screen-reader-text">Menu</h1>
+			<div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+			<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91"><a href="https://github.com/vsoch/noisecloud">Download</a></li>
+<li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-70"><a href="">Features</a>
+<ul class="sub-menu">
+	<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="../spatial/">spatial</a></li>
+	<li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a href="../temporal/">temporal</a></li>
+	<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="../submit/">contribute</a></li>
+</ul>
+</li>
+<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-26"><a href="../documentation/">Documentation</a>
+<ul class="sub-menu">
+	<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="../instructions/">Instructions</a></li>
+</ul>
+</li>
+<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-24"><a href="">About</a></li>
+</ul></div>		</nav><!-- .site-navigation .main-navigation -->
+	</header><!-- #masthead .site-header -->
+
+	<div id="main" class="site-main">
+		<div id="primary" class="content-area">
+			<div id="content" class="site-content" role="main">
+				
+<article id="post-14" class="post-14 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">Instructions</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<h3>noisecloud v1.0</h3>
+<p>This package has been developed from original scripts, so please submit bug reports to our <a href="https://groups.google.com/forum/?hl=en#!forum/noisecloud" target="_blank">user group</a>.</p>
+<ul>
+<li><a href="#ins">Installation</a></li>
+<li><a href="#pre">Preprocessing</a></li>
+<li><a href="#fea">Feature Extraction</a></li>
+<li><a href="#cla">Classifier</a></li>
+<li><a href="#jus">Just Download Features</a></li>
+<li><a href="#con">Contributing</a></li>
+<li><a href="#que">Questions</a></li>
+</ul>
+<p>&nbsp;<br />
+<a id="ins"></a></p>
+<h2><a id="ins"></a>Installation</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li>Download base scripts from <a href="https://github.com/vsoch/noisecloud">https://github.com/vsoch/noisecloud</a>.  Extract these scripts in a handy dandy location, cd to that location, and add them to your path:</li>
+</ul>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cc09aefacf3b640251440" class="crayon-syntax crayon-theme-vs2012-black crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">instructions_addpath</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+addpath(genpath(pwd))</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cc09aefacf3b640251440-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cc09aefacf3b640251440-1"><span class="crayon-e">addpath</span><span class="crayon-sy">(</span><span class="crayon-e">genpath</span><span class="crayon-sy">(</span><span class="crayon-v">pwd</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0008 seconds] -->
+<p></p>
+<ul>
+<li> You must have spm installed and added to your path.</li>
+</ul>
+<h2></h2>
+<p><a id="pre"></a></p>
+<h2><a id="pre"></a>Preprocessing</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h5><strong>Independent Component Analysis</strong></h5>
+<p>Preprocessing your data and performing ICA are up to you, to be done with your software package of choice.  I would recommend the <a href="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/MELODIC" target="_blank">MELODIC toolbox in FSL</a>.  For resting BOLD you will likely want to include bandpass filtering of your data, and registering all subjects to a standard template.</p>
+<h5><strong>Registration </strong></h5>
+<p>To extract spatial features relevant to different regions of interest and matter types, you will need to register the templates provided in the &#8220;mr&#8221; folder to the standard template that you data is registered to. You should add paths to these images under the script <a href="https://github.com/vsoch/noisecloud/blob/master/noisecloud_setup.m" target="_blank">noisecloud_setup</a>.</p>
+<h5><strong>Component Input</strong></h5>
+<p>If you performed ICA with FSL, you can select the .ica directories as your input, and the script will find the thresholded Z-stat images as well as the corresponding timeseries text files (t*.txt). If you have not used FSL, you must select these files manually. An example image and timeseries file are provided under <a href="https://github.com/vsoch/noisecloud/tree/master/example" target="_blank">example</a>.</p>
+<h2></h2>
+<p><a id="fea"></a></p>
+<h2><a id="fea"></a>Feature Extraction</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li>The main function that you want to run is &#8220;<a href="https://github.com/vsoch/noisecloud/blob/master/noisecloud.m" target="_blank">noisecloud</a>.&#8221; You can use it as follows:</li>
+</ul>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cc09aefacf56560794732" class="crayon-syntax crayon-theme-vs2012-black crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">instructions_noisecloud</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+[ features_norm, feature_labels, row_labels ] = noisecloud</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cc09aefacf56560794732-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cc09aefacf56560794732-1"><span class="crayon-sy">[</span><span class="crayon-h"> </span><span class="crayon-v">features_norm</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">feature_labels</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">row</span><span class="crayon-sy">_</span>labels<span class="crayon-h"> </span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">noisecloud</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0009 seconds] -->
+<p>to return a list of normalized features, corresponding labels (columns), and component IDs (rows). You will be asked to select FSL .ica directories, atlas images (that must be coregistered to the same standard template as your data), as well as specify the TR. The subject IDs will be extracted from the folder name. Change the script <a href="https://github.com/vsoch/noisecloud/blob/master/prep/noisecloud_read_fsldirs.m" target="_blank">prep/noisecloud_read_fsldirs.m</a> to edit specifics of the paths, etc, or just write your own input function.</p>
+<p>&nbsp;<br />
+<a id="cla"></a></p>
+<h2><a id="cla"></a>Classifier</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h5>Create Labels</h5>
+<p>You will need to have a set of labels to distinguish noise/not-noise, or some network of interest/~network of interest. If you processed your data with FSL, you can use the label networks gui under &#8220;<a href="https://github.com/vsoch/noisecloud/tree/master/prep/label-good-bad-gui" target="_blank">prep/label-good-bad-gui</a>&#8221; to create a .mat file with both image labels and names. If not, use <a href="https://github.com/vsoch/noisecloud/blob/master/prep/noisecloud_create_labels.m" target="_blank">prep/noisecloud_create_labels</a> as a guide to create this .mat file.</p>
+<h5>Build Classifier</h5>
+<p>You can use any sort of machine learning that you like to predict label type from the normalized data.  As an example, this pipeline provides <a href="https://github.com/vsoch/noisecloud/blob/master/noisecloud_classify.m" target="_blank">noisecloud_classify</a>, which will use cross validated logistic regression with the elastic net, a regularization technique that varies between the LASSO penalty and standard ridge regression.  It is supremely awesome.  To build the classifier with your data, run:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cc09aefacf66034070800" class="crayon-syntax crayon-theme-vs2012-black crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">instructions_classify</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+RESULT = noisecloud_classify(features_norm,feature_labels)</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cc09aefacf66034070800-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cc09aefacf66034070800-1"><span class="crayon-v">RESULT</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">noisecloud_classify</span><span class="crayon-sy">(</span><span class="crayon-v">features_norm</span><span class="crayon-sy">,</span><span class="crayon-v">feature_labels</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p></p>
+<ul>
+<li>The script will ask you to select your labels.mat file (created with the <a href="https://github.com/vsoch/noisecloud/tree/master/prep/label-good-bad-gui" target="_blank">label networks gui</a>),</li>
+<li>a value of K for cross validation,</li>
+<li>and a number of permutations (if you are interested in comparing your best cross validation accuracy to a distribution produced via random shuffling of the labels).  It is recommended to start with 1 permutation, as more than one takes a longer time.</li>
+<li>Alpha is chosen via a grid search between 0 and 1, and lambda is selected from a range based on the value that maximizes the cross validated accuracy.</li>
+<li>The script will plot an ROC curve to show sensitivity and specificity of your classifier, and a confusion matrix.  In the case that you run permutations, these ROC curves will be plotted as well.  The RESULT output object contains details about the model, the model itself, as well as selected features and weights.</li>
+</ul>
+<p><a id="jus"></a></p>
+<h2><a id="jus"></a>Just Download Features</h2>
+<p>&nbsp;</p>
+<p><a id="jus"></a><br />
+The script <a href="https://github.com/vsoch/noisecloud/blob/master/noisecloud_download.m" target="_blank">noisecloud_download</a> has been provided to just download feature extraction scripts into the temp folder. For each spatial feature script (noisecloud_spatial_*.m, the scripts take as input the 3D spatial map. For each temporal feature script (noisecloud_temporal_*.m) the scripts take as input the timeseries as a single vector.  Note that the download is incredibly simple &#8211; we query the database via HTTP (sometimes called a REST API), which returns JSON that is parsed by Matlab.<br />
+<a id="con"></a></p>
+<h2><a id="con"></a>Contributing</h2>
+<p>&nbsp;</p>
+<p><a id="con"></a><br />
+Please<a title="contribute" href="../submit"> submit your spatial and temporal features</a> for others to use!  Use the following format:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cc09aefacf71164958338" class="crayon-syntax crayon-theme-vs2012-black crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+% Spatial Feature Script
+function feature = nc_spatial_feature(spatialMap)
+   &lt;your code here&gt;
+   feature(1) = ...
+   feature(2) = ...
+
+   feature(n) = ...
+   &lt;end your code&gt;
+end
+
+% Temporal Feature Script
+function feature = nc_temporal_feature(timeseries)
+   &lt;your code here&gt;
+   feature = ...
+   &lt;end your code&gt;
+end</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cc09aefacf71164958338-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cc09aefacf71164958338-2">2</div><div class="crayon-num" data-line="crayon-5cc09aefacf71164958338-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cc09aefacf71164958338-4">4</div><div class="crayon-num" data-line="crayon-5cc09aefacf71164958338-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cc09aefacf71164958338-6">6</div><div class="crayon-num" data-line="crayon-5cc09aefacf71164958338-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cc09aefacf71164958338-8">8</div><div class="crayon-num" data-line="crayon-5cc09aefacf71164958338-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cc09aefacf71164958338-10">10</div><div class="crayon-num" data-line="crayon-5cc09aefacf71164958338-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cc09aefacf71164958338-12">12</div><div class="crayon-num" data-line="crayon-5cc09aefacf71164958338-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cc09aefacf71164958338-14">14</div><div class="crayon-num" data-line="crayon-5cc09aefacf71164958338-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cc09aefacf71164958338-16">16</div><div class="crayon-num" data-line="crayon-5cc09aefacf71164958338-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cc09aefacf71164958338-18">18</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cc09aefacf71164958338-1"><span class="crayon-ta">%</span><span class="crayon-h"> </span><span class="crayon-i">Spatial</span><span class="crayon-h"> </span><span class="crayon-i">Feature</span><span class="crayon-h"> </span><span class="crayon-i">Script</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cc09aefacf71164958338-2">&nbsp;</div><div class="crayon-line" id="crayon-5cc09aefacf71164958338-3"><span class="crayon-t">function</span><span class="crayon-h"> </span><span class="crayon-v">feature</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">nc_spatial_feature</span><span class="crayon-sy">(</span><span class="crayon-v">spatialMap</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cc09aefacf71164958338-4"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">&lt;</span><span class="crayon-e">your </span><span class="crayon-e">code </span><span class="crayon-v">here</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-5cc09aefacf71164958338-5"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-e">feature</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cc09aefacf71164958338-6"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-e">feature</span><span class="crayon-sy">(</span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5cc09aefacf71164958338-7">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cc09aefacf71164958338-8"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-e">feature</span><span class="crayon-sy">(</span><span class="crayon-v">n</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5cc09aefacf71164958338-9"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">&lt;</span><span class="crayon-st">end</span><span class="crayon-h"> </span><span class="crayon-e">your</span><span class="crayon-h"> </span><span class="crayon-e">code</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cc09aefacf71164958338-10"><span class="crayon-st">end</span></div><div class="crayon-line" id="crayon-5cc09aefacf71164958338-11">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cc09aefacf71164958338-12"><span class="crayon-ta">%</span><span class="crayon-h"> </span><span class="crayon-i">Temporal</span><span class="crayon-h"> </span><span class="crayon-i">Feature</span><span class="crayon-h"> </span><span class="crayon-i">Script</span></div><div class="crayon-line" id="crayon-5cc09aefacf71164958338-13">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cc09aefacf71164958338-14"><span class="crayon-t">function</span><span class="crayon-h"> </span><span class="crayon-v">feature</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">nc_temporal_feature</span><span class="crayon-sy">(</span><span class="crayon-v">timeseries</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5cc09aefacf71164958338-15"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">&lt;</span><span class="crayon-e">your </span><span class="crayon-e">code </span><span class="crayon-v">here</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cc09aefacf71164958338-16"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">feature</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5cc09aefacf71164958338-17"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">&lt;</span><span class="crayon-st">end</span><span class="crayon-h"> </span><span class="crayon-e">your </span><span class="crayon-v">code</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cc09aefacf71164958338-18"><span class="crayon-st">end</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0086 seconds] -->
+<p><a id="que"></a></p>
+<h3><a id="que"></a>Questions</h3>
+<p>&nbsp;</p>
+<p><a id="que"></a><br />
+<a href="https://groups.google.com/forum/?hl=en#!forum/noisecloud" target="_blank">Noisecloud User Group</a></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+					<span class="comments-link">
+				<a href="#comments-toggle">
+					<span class="tail"></span>
+					+				</a>
+			</span>
+		
+		<div class="entry-meta-wrapper">
+					</div>
+	</footer><!-- .entry-meta -->
+</article><!-- #post-14 -->
+
+	<div id="comments-toggle"></div>
+	<div id="comments" class="comments-area">
+
+	
+	
+	
+					<div id="respond" class="comment-respond">
+</div><!-- #comments .comments-area -->
+
+				
+			</div><!-- #content .site-content -->
+		</div><!-- #primary .content-area -->
+
+				<div id="secondary" class="widget-area" role="complementary">
+
+									
+		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main .site-main -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+            <span class="sep"> | </span>
+        	 <a href="https://vsoch.github.io/">vsoch</a>.		</div><!-- .site-info -->
+			</footer><!-- #colophon .site-footer -->
+</div><!-- #page .hfeed .site -->
+
+<script type='text/javascript' src='../js/toggle.js?ver=20121005'></script>
+<script type='text/javascript' src='../js/comment-reply.min.js?ver=4.4.18'></script>
+<script type='text/javascript' src='../js/wp-embed.min.js?ver=4.4.18'></script>
+
+</body>
+</html>

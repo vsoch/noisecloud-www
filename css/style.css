@@ -1,0 +1,1917 @@
+/*
+Theme Name: Spun
+Theme URI: http://carolinethemes.com/2012/11/04/spun/
+Description: Spun is a minimalist, responsive theme that puts the emphasis on your content; extraneous navigation fades away to put your words and images front and center. PLEASE NOTE: Version 2.0 makes some major changes, please upgrade at your own risk.
+Version: 2.0.2
+Author: Caroline Moore
+Author URI: http://carolinemoore.net/
+License: GPL v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, one-column, fixed-width, white, gray, custom-menu, custom-background, custom-header, flexible-header, rtl-language-support, translation-ready, editor-style, featured-images, flexible-header, post-formats, theme-options
+
+This theme, like WordPress, is licensed under the GPL v2 or later.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Spun is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+
+/* =Fonts
+-------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Genericons';
+    src: url('font/genericons-regular-webfont.eot');
+}
+
+@font-face {
+    font-family: 'Genericons';
+    src: url(data:application/font-woff;charset=utf-8;base64,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) format('woff'),
+         url('font/genericons-regular-webfont.ttf') format('truetype'),
+         url('font/genericons-regular-webfont.svg#genericonsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #666;
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-style: italic;
+	margin: 1em 0;
+}
+h1 {
+	font-size: 32px;
+	font-size: 3.2rem;
+	line-height: 1em;
+}
+h2 {
+	font-size: 28px;
+	font-size: 2.8rem;
+}
+h3 {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+h4 {
+	font-size: 20px;
+	font-size: 2.0rem;
+}
+h5 {
+	font-family: Quicksand, Arial, Helvetica, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-style: normal;
+	text-transform: uppercase;
+}
+h6 {
+	font-family: Quicksand, Arial, Helvetica, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-style: normal;
+	text-transform: uppercase;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+::selection {
+	background-color: #444;
+	color: #fff;
+}
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 2em;
+}
+ul {
+	list-style: none;
+}
+ul li:before {
+	content: "\02022";
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin: 0 0 0 -1.5em;
+	padding: 0 1em 0 0;
+}
+ul ul li:before {
+	content: "\00B0";
+}
+ul ul ul li:before {
+	content: "\25C7";
+	font-size: 10px;
+	font-size: 1rem;
+}
+ol {
+	list-style: decimal;
+}
+ol ol {
+	list-style: lower-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+cite {
+	font-size: 12px;
+	font-style: normal;
+	text-transform: uppercase;
+}
+blockquote {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-style: italic;
+	margin: 1.5em 0;
+	padding: 1em 1.5em;
+}
+blockquote p {
+	margin: 0;
+}
+blockquote cite {
+	clear: both;
+	float: right;
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-style: normal;
+	text-transform: uppercase;
+}
+address {
+	font-style: italic;
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #fafafa;
+	border: 1px dashed #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	background: #fafafa;
+	border: 1px dashed #eee;
+	font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #aee6f8;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	font-size: 90%;
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+td {
+	border-bottom: 1px solid #eee;
+	padding: 5px 10px;
+}
+th {
+	border-bottom: 1px solid #eee;
+	font-size: 16px;
+	font-size: 1.6rem;
+	padding: 5px 10px;
+	text-transform: uppercase;
+}
+tr:hover {
+	background: rgba(0,0,0,.01);
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: #444;
+	border: 0 none;
+	border-radius: 50px;
+	color: #fff;
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1;
+	margin: 0;
+	padding: .65em 1em;
+	text-transform: uppercase;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	opacity: 1;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type=text],
+input[type=password],
+input[type=email],
+textarea {
+	color: #666;
+	border: 1px solid #f2f2f2;
+	border-radius: 3px;
+}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+textarea:focus {
+	color: #999;
+}
+input[type=text],
+input[type=email],
+input[type=password] {
+	padding: 3px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+a {
+	color: #333;
+	text-decoration: none;
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+}
+a:visited {
+	color: #333;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #999;
+	text-decoration: none;
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-top: 1.5em;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-top: 1.5em;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 1.5em auto;
+}
+
+/* Clear fix */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    content: '';
+    display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+    clear: both;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* =Menu
+----------------------------------------------- */
+
+.main-navigation {
+	color: #999;
+	display: block;
+	float: right;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin: 0;
+	position: relative;
+	text-align: right;
+	text-transform: uppercase;
+	width: 50%;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.main-navigation li {
+	background: #fff;
+	display: inline-block;
+	margin: 0 0 5px 20px;
+	position: relative;
+}
+.main-navigation li:before {
+	content: "";
+	margin: 0;
+	padding: 0;
+}
+.main-navigation a {
+	color: #999;
+	display: block;
+	text-decoration: none;
+}
+.main-navigation ul ul {
+	float: left;
+	opacity: 0;
+	position: absolute;
+		top: 1.6em;
+		left: 0;
+	text-align: left;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	visibility: hidden;
+	z-index: 99999;
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	padding: 5px 10px;
+	text-transform: none;
+	width: 150px;
+}
+.main-navigation ul ul li,
+.main-navigation ul ul li:hover {
+	margin: 0 0 0 -10px;
+}
+.main-navigation ul ul ul li,
+.main-navigation ul ul ul li:hover {
+	margin: 0;
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a,
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+	opacity: 1;
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	visibility: visible;
+}
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+}
+.main-navigation ul li.current_page_item ul a,
+.main-navigation ul li.current-menu-item ul a,
+.main-navigation ul ul li.current_page_item a,
+.main-navigation ul ul li.current-menu-item a {
+}
+.main-navigation ul ul .parent > a:after {
+	color: #999;
+	content: "\00BB";
+	display: inline-block;
+	margin: 0 0 0 .5em;
+}
+
+/* Small menu */
+.menu-toggle {
+	clear: none;
+	color: #444;
+	cursor: pointer;
+	display: block;
+	float: right;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-style: normal;
+	margin: 0;
+	position: relative;
+	text-align: right;
+	text-transform: uppercase;
+	transition: color .4s ease-in-out;
+	-webkit-transition: color .4s ease-in-out;
+	-moz-transition: color .4s ease-in-out;
+	-o-transition: color .4s ease-in-out;
+	width: auto;
+}
+.main-small-navigation .menu {
+	clear: both;
+	display: none;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	margin: 0;
+	padding: 1.5em 0 0;
+	width: 100%;
+}
+.main-small-navigation .menu li {
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin-left: 10px;
+	text-transform: uppercase;
+}
+
+
+/* =Layout
+----------------------------------------------- */
+
+.site {
+	margin: 0 auto;
+	padding: 0 50px;
+	width: 1000px;
+}
+.single .content-area,
+.page .content-area,
+.search-no-results .content-area,
+.error404 .content-area {
+	clear: both;
+	margin: 0 auto;
+	width: 800px;
+}
+.widget-area {
+	clear: both;
+	display: none;
+	padding: 50px 0;
+}
+
+
+/* =Footer
+----------------------------------------------- */
+
+.site-footer {
+	color: #333;
+	clear: both;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 12px;
+	font-size: 1.2rem;
+	padding: 100px 0 50px;
+	text-align: left;
+	text-transform: uppercase;
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	width: 100%;
+}
+.site-footer a {
+	color: #333;
+}
+.site-footer:hover,
+.site-footer:focus {
+	opacity: 1;
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+}
+.site-info {
+	float: left;
+	line-height: 40px;
+	width: 65%;
+}
+
+/* Social Links */
+.social-links {
+	float: right;
+	text-align: right;
+	width: 33%;
+}
+.social-links a:before {
+	background: #444;
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	font-family: Genericons;
+	font-size: 24px;
+	font-size: 2.4rem;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 40px;
+	margin-left: 5px;
+	text-align: center;
+	text-decoration: inherit;
+	width: 40px;
+	height: 40px;
+	vertical-align: top;
+}
+.facebook-link:before {
+	content: '\f204';
+}
+.twitter-link:before {
+	content: '\f202';
+}
+.tumblr-link:before {
+	content: '\f214';
+}
+.linkedin-link:before {
+	content: '\f207';
+}
+
+
+/* =Header
+----------------------------------------------- */
+
+.site-header {
+	clear: both;
+	display: block;
+	min-height: 30px;
+	padding: 30px 0;
+	position: relative;
+	transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	width: 100%;
+}
+.site-header:hover,
+.site-header:focus {
+	opacity: 1;
+	transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+}
+.site-header img {
+	display: inline-block;
+	margin-right: 1em;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+.header-wrapper {
+	display: block;
+	float: left;
+	width: 45%;
+}
+.site-branding {
+	color: #999;
+	display: inline-block;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	position: relative;
+	text-transform: uppercase;
+	vertical-align: sub;
+}
+.site-branding a {
+	transition: color .5s ease-in-out;
+	-webkit-transition: color .5s ease-in-out;
+	-moz-transition: color .5s ease-in-out;
+	-o-transition: color .5s ease-in-out;
+}
+.site-description {
+	clear: none;
+	color: #999;
+	display: none;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-style: normal;
+	margin: .75em 0;
+	text-transform: uppercase;
+}
+.site-title {
+	clear: none;
+	display: inline-block;
+	float: left;
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1em;
+	margin: 0;
+	text-transform: none;
+	vertical-align: middle;
+}
+.site-title a {
+	color: #999;
+}
+
+/* =Homepage
+----------------------------------------------- */
+
+.content-area {
+	padding: 0;
+	width: 100%;
+}
+.hentry {
+	float: left;
+	margin: 10px;
+	padding: 0;
+	position: relative;
+	width: 180px;
+	height: 180px;
+}
+.blog .hentry,
+.archive .hentry,
+.search .hentry {
+	background: transparent;
+}
+.blog .hentry a,
+.archive .hentry a,
+.search .hentry a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.blog .hentry a .attachment-home-post,
+.archive .hentry a .attachment-home-post,
+.search .hentry a .attachment-home-post {
+	border-radius: 180px;
+	opacity: .8;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.blog .hentry a:hover img,
+.archive .hentry a:hover img,
+.search .hentry a:hover img,
+.blog .hentry a:focus img,
+.archive .hentry a:focus img,
+.search .hentry a:focus img {
+	border-radius: 180px;
+	filter: grayscale(0);
+	-webkit-filter: none;
+	-moz-filter: none;
+	-o-filter: none;
+	-ms-filter: none;
+	opacity: 1;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	width: 100%;
+	height: 100%;
+}
+.hentry.no-thumbnail {
+	background: #444;
+	border-radius: 180px;
+	overflow: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	word-wrap: break-word;
+	width: 180px;
+	max-width: 180px;
+	height: 180px;
+	max-height: 180px;
+}
+.hentry .thumbnail-title {
+	color: #fff;
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 32px;
+	font-size: 3.2rem;
+	font-style: italic;
+	line-height: 32px;
+	overflow: hidden;
+	position: absolute;
+		top: 50%;
+		left: 50%;
+	text-align: center;
+	text-shadow: 0 0 2px rgba(0,0,0,.4);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	vertical-align: middle;
+	word-wrap: break-word;
+	width: 180px;
+}
+.hentry.no-thumbnail .thumbnail-title {
+	display: block;
+	text-shadow: none;
+}
+.hentry.no-thumbnail:hover,
+.hentry.no-thumbnail:focus {
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+}
+.single .hentry,
+.error404 .hentry,
+.page .hentry,
+.search-no-results .no-results {
+	margin: 0 0 1.5em;
+	padding: 70px 50px;
+	width: 700px;
+	height: auto;
+	z-index: 10;
+}
+.entry-meta {
+	clear: both;
+	color: #999;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin: 50px 0 0;
+	text-transform: uppercase;
+}
+.entry-meta-wrapper {
+	float: left;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	width: 90%;
+}
+.entry-meta a {
+	color: #999;
+}
+.entry-meta-wrapper:hover,
+.entry-meta-wrapper:focus {
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+.post-date,
+.cat-links,
+.tags-links {
+	display: block;
+	max-width: 90%;
+}
+.byline {
+	display: none;
+}
+.entry-title,
+.entry-title a {
+	color: #444;
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 32px;
+	font-size: 3.2rem;
+	font-style: italic;
+	line-height: 1em;
+	margin: 0 0 20px 0;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.entry-content,
+.entry-summary {
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: 300;
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin: 2em 0;
+	text-transform: uppercase;
+}
+.page-links span.active-link,
+.page-links a span.active-link {
+	background: #444;
+	border-radius: 17px;
+	color: #fff;
+	display: inline-block;
+	margin: 0 3px 3px 0;
+	padding: 5px;
+	text-align: center;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	width: 17px;
+	height: 17px;
+}
+.page-links a:hover span.active-link,
+.page-links a:focus span.active-link,
+.page-links span.active-link {
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+.edit-link {
+	clear: both;
+	display: block;
+}
+.edit-link a {
+	color: #999;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.page-header h1 {
+	background: #444;
+	border-radius: 180px;
+	color: rgba(255,255,255,.13);
+	display: block;
+	float: left;
+	font-size: 36px;
+	font-size: 3.6rem;
+	line-height: 16px;
+	margin: 10px;
+	padding: 70px 20px 0;
+	width: 140px;
+	height: 110px;
+	text-align: center;
+}
+.page-header h1 span {
+	clear: both;
+	color: #fff;
+	display: block;
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+.page-header h1 a {
+	color: #fff;
+}
+
+
+/* =Post Formats
+----------------------------------------------- */
+
+.single .format-aside .entry-content {
+	display: block;
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 28px;
+	font-size: 2.8rem;
+	font-style: italic;
+	margin: -50px 0 0;
+	padding: 50px 0;
+	text-align: center;
+}
+.single .format-status .entry-title {
+	display: none;
+}
+.single .format-status.hentry {
+	padding-top: 50px;
+}
+.single .format-status .status-avatar img {
+	border-radius: 40px;
+	float: left;
+	margin: 1.5em 2em .75em 0;
+}
+.single .format-link .link-icon:before {
+	background: #444;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #fff;
+	content: '\f107';
+	display: block;
+	float: left;
+	font-family: Genericons;
+	font-size: 48px;
+	font-size: 4.8rem;
+	-webkit-font-smoothing: antialiased;
+	line-height: 60px;
+	margin: 0 .5em 0 0;
+	padding-top: 2px;
+	padding-left: 3px;
+	text-align: center;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	width: 60px;
+	height: 60px;
+}
+.single .format-link.hentry {
+	padding-top: 50px;
+}
+.single .format-quote .entry-title {
+	display: none;
+}
+.single-post-thumbnail {
+	margin: 0 0 2em;
+}
+.single-post-thumbnail img {
+	max-width: 100%;
+	height: auto;
+}
+.single-gallery {
+	margin: 0 0 2em;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+	height: auto;
+}
+.site-header img,
+.entry-content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+	max-width: 100%;
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	max-width: 100%;
+}
+.wp-caption.aligncenter,
+.wp-caption.alignleft,
+.wp-caption.alignright {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+.wp-caption img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.wp-caption-text {
+	color: #999;
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-align: left;
+	text-transform: uppercase;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+	font-size: 14px;
+	font-size: 1.4rem;
+	text-align: center;
+	text-transform: none;
+}
+.site-content .gallery a img {
+	border: none !important;
+	height: auto;
+	max-width: 90%;
+}
+.site-content .gallery dd {
+	margin: 0;
+}
+.site-content .gallery .gallery-item {
+	margin: 0 0 1.5em;
+}
+.site-content .format-gallery .gallery .gallery-item {
+	margin: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+#image-navigation {
+	clear: both;
+}
+.next-image {
+	float: right;
+}
+.site-content .site-navigation {
+	clear: both;
+	margin: 1.5em 0;
+	text-align: center;
+}
+.site-content #nav-below .nav-previous a,
+.site-content #nav-below .nav-next a,
+.site-content #image-navigation .nav-previous a,
+.site-content #image-navigation .nav-next a {
+	display: block;
+	position: fixed;
+		top: 0;
+	text-align: center;
+	width: 120px;
+	height: 100%;
+	z-index: 1;
+}
+.site-content #nav-below .nav-previous a:before,
+.site-content #nav-below .nav-next a:before,
+.site-content #image-navigation .nav-previous a:before,
+.site-content #image-navigation .nav-next a:before {
+	background: #444;
+	border-radius: 50%;
+	color: #fff;
+	content: '\f430';
+	display: inline-block;
+	font-family: Genericons;
+	font-size: 50px;
+	font-size: 5.0rem;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	line-height: 1;
+	position: relative;
+		top: 50%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+}
+.site-content #nav-below .nav-next a:before,
+.site-content #image-navigation .nav-next a:before {
+	content: '\f429';
+}
+.site-content #nav-below .nav-previous a,
+.site-content #image-navigation .nav-previous a {
+	left: 0;
+}
+.site-content #nav-below .nav-next a,
+.site-content #image-navigation .nav-next a {
+	right: 0;
+}
+.site-content #nav-below .nav-previous a span,
+.site-content #nav-below .nav-next a span,
+.site-content #image-navigation .nav-previous a span,
+.site-content #image-navigation .nav-next a span {
+	display: block;
+	top: 50%;
+	margin-top: -50px;
+	height: 100px;
+	position: relative;
+}
+.site-content #nav-below .nav-previous a:hover,
+.site-content #nav-below .nav-next a:hover,
+.site-content #image-navigation .nav-previous a:hover,
+.site-content #image-navigation .nav-next a:hover,
+.comment-navigation .nav-next a:hover,
+.comment-navigation .nav-previous a:hover,
+.site-content #nav-below .nav-previous a:focus,
+.site-content #nav-below .nav-next a:focus,
+.site-content #image-navigation .nav-previous a:focus,
+.site-content #image-navigation .nav-next a:focus,
+.comment-navigation .nav-next a:focus,
+.comment-navigation .nav-previous a:focus {
+	opacity: 1;
+}
+.site-content .comment-navigation {
+	margin: 0 0 3em;
+}
+.comment-navigation .nav-next a:before,
+.comment-navigation .nav-previous a:before {
+	background: #444;
+	border-radius: 50%;
+	color: #fff;
+	content: "\f430";
+	display: block;
+	float: left;
+	font-family: Genericons;
+	font-size: 40px;
+	font-size: 4.0rem;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 300;
+	line-height: 1;
+	margin: 0;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+}
+.comment-navigation .nav-next a:before {
+	content: "\f429";
+	float: right;
+}
+
+
+/* =Comments
+----------------------------------------------- */
+
+#comments {
+	clear: both;
+	display: none;
+	padding: 0 50px 50px;
+}
+.paginated-comments #comments {
+	display: block;
+}
+#comments-toggle {
+	clear: both;
+	height: 50px;
+	position: relative;
+	visibility: hidden;
+}
+.commentlist,
+.commentlist ul.children {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.commentlist ul.children {
+	margin: 0 0 0 1.5em;
+}
+.commentlist ul.children li:before {
+	content: "";
+}
+h2.comments-title {
+	padding: 50px 0 0;
+	margin: 0 0 auto;
+}
+.bypostauthor {
+}
+.form-allowed-tags {
+	display: none;
+}
+li.comment,
+.pingback,
+.trackback {
+	border-top: 1px solid #eee;
+	clear: both;
+	margin: 2em 0 0;
+	padding: 2em 0 0;
+}
+.commentlist > li.comment:first-child,
+.commentlist > .pingback:first-child,
+.commentlist > .trackback:first-child {
+	border-top: 0 none;
+}
+.pingback p,
+.trackback p {
+	margin: 0;
+}
+.comment-author cite {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+.comment-author .avatar {
+	border-radius: 40px;
+	float: left;
+	margin: 0 1em 0 0;
+}
+.comment-content {
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 300;
+	margin: 1.5em 0 0 65px;
+}
+.comment-meta {
+	color: #444;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+.comment-meta a {
+	color: #444;
+}
+.comment-meta:hover,
+.comment-meta:focus {
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+a.comment-reply-link {
+	background: #444;
+	border-radius: 50px;
+	color: #fff;
+	display: inline-block;
+	float: right;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin: 0;
+	padding: 5px 10px;
+	text-transform: uppercase;
+}
+a.comment-reply-link:hover,
+a.comment-reply-link:focus {
+	opacity: 1;
+}
+a#cancel-comment-reply-link {
+	background: #444;
+	border-radius: 50px;
+	color: #fff;
+	display: block;
+	float: right;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	-webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-style: normal;
+	padding: 5px 10px;
+}
+a#cancel-comment-reply-link:hover,
+a#cancel-comment-reply-link:focus {
+	opacity: 1;
+}
+#respond {
+	padding: 3em 0 0;
+}
+#reply-title {
+	margin: 0;
+}
+.says {
+	display: none;
+}
+.comments-link a {
+	background: #444;
+	border-radius: 30px;
+	color: #fff;
+	display: block;
+	float: right;
+	line-height: 1;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+}
+.comments-link .tail {
+	border-top: 10px solid #444;
+	border-right: 8px solid transparent;
+	border-bottom: 0;
+	border-left: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: relative;
+		top: 95%;
+		left: 12px;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	width: 0;
+	height: 0;
+	z-index: -1;
+}
+.comments-link a:hover,
+.comments-link a:focus {
+	opacity: 1;
+}
+.comments-link a:hover .tail,
+.comments-link a:focus .tail {
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-comment {
+	border: 1px solid #eee;
+	border-radius: 2px;
+	margin: 0 0 .5em;
+	padding: 5px 10px;
+	position: relative;
+	font-size: 14px;
+	text-transform: uppercase;
+	max-width: 92%;
+}
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+	border: 0 none;
+	float: right;
+	width: 84%;
+}
+.comment-form-comment textarea {
+	border: 0 none;
+	clear: both;
+	width: 100%;
+}
+.nocomments {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	clear: both;
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 20px;
+	font-size: 2.0rem;
+	font-style: italic;
+	padding: 2em 0;
+	text-align: center;
+}
+
+
+/* =Widgets
+----------------------------------------------- */
+
+.sidebar-link {
+	background: #444;
+	border-radius: 40px;
+	clear: both;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 18px;
+	font-size: 1.8rem;
+	line-height: 40px;
+	margin: 2em auto 0;
+	text-align: center;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	width: 40px;
+	height: 40px;
+}
+.sidebar-link.toggled-on {
+	line-height: 36px;
+	opacity: 1;
+}
+.sidebar-link:hover,
+.sidebar-link:focus {
+	color: #fff;
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+.widget {
+	font-family: Baskerville, "Playfair Display", "Times New Roman", serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 100;
+	margin: 0 0 3em;
+}
+/* Make sure select elements fit in widgets */
+.widget select {
+    max-width: 100%;
+}
+.widget-column {
+	width: 23%;
+}
+.widget-title {
+	font-size: 24px;
+	font-size: 2.4rem;
+	margin: 0 0 .5em 0;
+}
+.one.widget-column {
+	float: none;
+	margin: 0 auto;
+}
+.two.widget-column {
+	float: left;
+	margin: 0 13.5%;
+}
+.three.widget-column {
+	float: left;
+	margin: 0 5%;
+}
+
+/* Search widget */
+#searchsubmit {
+	display: none;
+}
+
+/* Calendar */
+#wp-calendar caption {
+	font-weight: 700;
+	margin: 0 0 .5em 0;
+	text-align: center;
+}
+#wp-calendar td,
+#wp-calendar th {
+	padding: 2px;
+	text-align: center;
+}
+#wp-calendar #next {
+	text-align: right;
+}
+#wp-calendar #prev {
+	text-align: left;
+}
+
+
+/* =Jetpack
+------------------------------------------------*/
+
+/* Hides navigation links and site footer when infinite scroll is active */
+.infinite-scroll #nav-below,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+/* Shows the footer again in case all posts have been loaded */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+#infinite-footer .container {
+	background: rgba(255,255,255,.5);
+	border: none;
+}
+#infinite-footer .blog-credits,
+#infinite-footer .blog-credits a,
+#infinite-footer .blog-credits a:hover,
+#infinite-footer .blog-credits a:focus,
+#infinite-footer .blog-info a,
+#infinite-footer .blog-info a:hover,
+#infinite-footer .blog-info a:focus {
+	color: rgba(0,0,0,.3);
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.infinite-loader {
+	clear: both;
+	margin: 0 auto;
+	padding: 50px 0 0;
+	position: relative;
+	text-align: center;
+	width: 35px;
+}
+#infinite-handle {
+	clear: both;
+	margin: 0 auto 13px;
+	padding: 25px 0 0;
+}
+#infinite-handle span {
+	background: #444;
+	color: #fff;
+	border-radius: 40px;
+	clear: both;
+	display: block;
+	line-height: 40px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	width: 90px;
+	height: 40px;
+}
+#infinite-handle span:hover,
+#infinite-handle span:focus {
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+
+/* =Responsive
+----------------------------------------------- */
+
+@media screen and ( max-width: 1200px ) {
+	.site {
+		width: 600px;
+	}
+	.single .content-area,
+	.page .content-area,
+	.search-no-results .content-area,
+	.error404 .content-area {
+		width: 100%;
+	}
+	.single .hentry,
+	.error404 .hentry,
+	.page .hentry,
+	.search-no-results .no-results {
+		width: 500px;
+	}
+	.site-info {
+		line-height: 1.6;
+	}
+}
+
+@media screen and ( max-width: 800px ) {
+	blockquote {
+		font-size: 20px;
+		font-size: 2.0rem;
+	}
+	.site {
+		width: 400px;
+	}
+	.hentry {
+		margin: 5px;
+		width: 123px;
+		height: 123px;
+	}
+	.hentry.no-thumbnail {
+		width: 123px;
+		height: 123px;
+	}
+	.hentry .thumbnail-title {
+		font-size: 24px;
+		font-size: 2.4rem;
+		line-height: normal;
+		width: 123px;
+	}
+	.page-header h1 {
+		margin: 5px;
+		padding: 35px 11px 0;
+		width: 101px;
+		height: 88px;
+	}
+	.single .hentry,
+	.page .hentry,
+	.error404 .hentry,
+	.search-no-results .no-results,
+	.single .content-area,
+	.page .content-area,
+	.search-no-results .content-area,
+	.error404 .content-area {
+		padding: 0;
+		width: 100%;
+	}
+	.single .content-area {
+		width: 100%;
+	}
+	#comments {
+		padding: 0;
+	}
+	.comment-author .avatar {
+		float: right;
+		margin: 0 0 0 1em;
+	}
+	.comment-content {
+		margin: 1.5em 0 0;
+	}
+	.one.widget-column,
+	.two.widget-column,
+	.three.widget-column,
+	.site-info,
+	.social-links {
+		clear: both;
+		float: none;
+		width: auto;
+	}
+	.comment-form-author input,
+	.comment-form-email input,
+	.comment-form-url input {
+		border: 0 none;
+		float: right;
+		width: 75%;
+	}
+	.single .format-status.hentry {
+		padding-top: 0;
+	}
+}
+@media screen and ( max-width: 600px ) {
+	.site {
+		padding: 0;
+		width: 300px;
+	}
+	.hentry {
+		margin: 5px;
+		width: 140px;
+		height: 140px;
+	}
+	.hentry.no-thumbnail {
+		width: 140px;
+		height: 140px;
+	}
+	.hentry .thumbnail-title {
+		font-size: 24px;
+		font-size: 2.4rem;
+		line-height: normal;
+		width: 140px;
+	}
+	.page-header h1 {
+		margin: 5px;
+		padding: 48px 18px;
+		width: 104px;
+		height: 44px;
+	}
+	.site-content #nav-below .site-navigation,
+	.site-content #image-navigation .site-navigation {
+		margin: 1.5em 0;
+		overflow: hidden;
+		width: 100%;
+	}
+	.site-content #nav-below .nav-previous a,
+	.site-content #nav-below .nav-next a,
+	.site-content #image-navigation .nav-previous a,
+	.site-content #image-navigation .nav-next a {
+		float: left;
+		margin: 0;
+		text-align: left;
+		position: relative;
+			top: auto;
+		width: 50%;
+		height: 50px;
+		z-index: 1;
+	}
+	.site-content #nav-below .nav-previous a:before,
+	.site-content #nav-below .nav-next a:before,
+	.site-content #image-navigation .nav-previous a:before,
+	.site-content #image-navigation .nav-next a:before {
+		font-size: 40px;
+		font-size: 4.0rem;
+		margin-top: 1.5em;
+		width: 40px;
+		height: 40px;
+	}
+	.site-content #nav-below .nav-next a,
+	.site-content #image-navigation .nav-next a {
+		float: right;
+		text-align: right;
+	}
+	.single-post-thumbnail img {
+		clear: both;
+		width: 100%;
+		margin: 0 0 2em 0;
+		max-width: 100%;
+		min-height: auto;
+		min-width: 100%;
+		height: auto;
+		position: relative;
+			top: auto;
+			left: auto;
+		z-index: 10;
+	}
+}
